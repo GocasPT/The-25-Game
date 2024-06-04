@@ -1,9 +1,9 @@
 function Header() {
     return (
         <header>
-            <h1>Game of Life</h1>
+        <h1>Header</h1>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
