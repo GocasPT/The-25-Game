@@ -34,6 +34,13 @@ function Board({ size }) {
         setBoard(newBoard);
     }
 
+    const handleRestart = () => {
+        const newBoard = createBoard(size, size);
+        setBoard(newBoard);
+        setCount(1);
+        setGameOver(false);
+    }
+
     // Initialize the board
     useEffect(() => {
         const initialBoard = createBoard(size, size);
@@ -47,24 +54,28 @@ function Board({ size }) {
                 alert("You lost the game!");
             else
                 alert("You won the game!");
-            
-            setCount(1);
-            setGameOver(false); // PLACE_HOLDER
         }
     }, [isGameOver, count, size]);
 
     return (
-        <section className="board">
-            {board.map((row, rowIndex) => (
-                row.map((cell, colIndex) => (
-                    <Cell
+        <>
+            <section className="board">
+                {board.map((row, rowIndex) => (
+                    row.map((cell, colIndex) => (
+                        <Cell
                         key={`${rowIndex}-${colIndex}`}
                         value={cell}
                         onCellClick={() => handleClick(rowIndex, colIndex)}
-                    />
-                ))
-            ))}
-        </section>
+                        />
+                    ))
+                ))}
+            </section>
+            {isGameOver && 
+                <button className="restart" onClick={handleRestart}>
+                    Restart
+                </button>
+            }
+        </>
     );
 }
 

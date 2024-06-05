@@ -1,8 +1,14 @@
 .cell {
-   height:50px;
-   width:50px;
+   height:75px;
+   width:75px;
+   font-size: 2rem;
+   padding: 0;
 }
 
 .cell.enable {
     background-color: yellow;
+}
+
+.cell.withNumber {
+    background-color: gray;
 }
