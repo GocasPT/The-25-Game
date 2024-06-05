@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer>
-            <p>Footer</p>
+            <p>Developed by Guilherme Camacho</p>
         </footer>
     );
 }
