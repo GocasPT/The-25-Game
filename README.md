@@ -1,8 +1,7 @@
-# React + Vite
+# The 25 Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="public/the25game-logo.svg" alt="The 25 Game Logo" width="100">
 
-Currently, two official plugins are available:
+Simples 5 by 5 board game to fill with numbers with especifics moves.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Avalable in [this website](https://the25game.vercel.app/).
