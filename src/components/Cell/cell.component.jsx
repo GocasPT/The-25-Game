@@ -9,7 +9,17 @@ function Cell({ value, onCellClick }) {
     }
 
     return (
-        <button className={`cell ${value === CELL_VALUE.POSSIBLE_MOVE ? "enable" : ""}`} onClick={onCellClick}>
+        <button
+            className={
+                `cell ${
+                    value === CELL_VALUE.POSSIBLE_MOVE
+                    ? "enable"
+                    : cellContent() != null
+                        ? "withNumber"
+                        : ""
+                    }`
+            }
+            onClick={onCellClick}>
             {cellContent()}
         </button>
     );

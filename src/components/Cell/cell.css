@@ -8,3 +8,7 @@
 .cell.enable {
     background-color: yellow;
 }
+
+.cell.withNumber {
+    background-color: gray;
+}
