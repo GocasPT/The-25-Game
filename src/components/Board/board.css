@@ -3,3 +3,8 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: .5rem;
 }
+
+.restart {
+    background-color: red;
+    margin-top: 2rem;
+}

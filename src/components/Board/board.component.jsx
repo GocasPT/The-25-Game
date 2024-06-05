@@ -59,22 +59,22 @@ function Board({ size }) {
 
     return (
         <>
-            {isGameOver && 
-                <button onClick={handleRestart}>
-                    Restart
-                </button>
-            }
             <section className="board">
                 {board.map((row, rowIndex) => (
                     row.map((cell, colIndex) => (
                         <Cell
-                            key={`${rowIndex}-${colIndex}`}
-                            value={cell}
-                            onCellClick={() => handleClick(rowIndex, colIndex)}
+                        key={`${rowIndex}-${colIndex}`}
+                        value={cell}
+                        onCellClick={() => handleClick(rowIndex, colIndex)}
                         />
                     ))
                 ))}
             </section>
+            {isGameOver && 
+                <button className="restart" onClick={handleRestart}>
+                    Restart
+                </button>
+            }
         </>
     );
 }
