@@ -48,16 +48,6 @@ function App() {
         setBoard(initialBoard);
     }, [size]);
 
-    // On game over
-    /*useEffect(() => {
-        if (isGameOver) {
-            if (count !== size * size)
-                alert("You lost the game!");
-            else
-                alert("You won the game!");
-        }
-    }, [isGameOver, count, size]);*/
-
   return (
     <>
       <Header />
@@ -67,6 +57,8 @@ function App() {
       />
       <GameOverModel
         isGameOver={isGameOver}
+        fillCells={count - 1}
+        maxCells={size * size}
         onRestart={handleRestart}
       />
       <Footer />

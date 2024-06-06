@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@nextui-org/react";
 
-function GameOverModel({ isGameOver, onRestart }) {
+function GameOverModel({ isGameOver, fillCells, maxCells, onRestart }) {
     return (
         <Modal isOpen={isGameOver} onOpenChange={onRestart} className="dark">
             <ModalContent>
                 <ModalHeader>Game Over</ModalHeader>
                 <ModalBody>
-                    Texto body
+                    You fill {fillCells} of {maxCells} cells.
                 </ModalBody>
                 <ModalFooter>
                     <Button onPress={onRestart}>Restart</Button>
@@ -19,6 +19,8 @@ function GameOverModel({ isGameOver, onRestart }) {
 
 GameOverModel.propTypes = {
     isGameOver: PropTypes.bool.isRequired,
+    fillCells: PropTypes.number.isRequired,
+    maxCells: PropTypes.number.isRequired,
     onRestart: PropTypes.func.isRequired
 }
 
