@@ -1,10 +1,16 @@
 .board {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     grid-gap: .5rem;
 }
 
-.restart {
-    background-color: red;
-    margin-top: 2rem;
+.board.columns-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.board.columns-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.board.columns-7 {
+    grid-template-columns: repeat(7, 1fr);
 }

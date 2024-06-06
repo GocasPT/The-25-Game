@@ -3,25 +3,20 @@ import { Cell } from ".."
 import "./board.css"
 
 function Board({ board, onCellClick }) {
+    const columnsClass = `columns-${board.length}`;
+
     return (
-        <>
-            <section className="board">
-                {board.map((row, rowIndex) => (
-                    row.map((cell, colIndex) => (
-                        <Cell
-                        key={`${rowIndex}-${colIndex}`}
-                        value={cell}
-                        onCellClick={() => onCellClick(rowIndex, colIndex)}
-                        />
-                    ))
-                ))}
-            </section>
-            {/*isGameOver && 
-                <button className="restart" onClick={handleRestart}>
-                    Restart
-                </button>
-            */}
-        </>
+        <section className={`board ${columnsClass}`}>
+            {board.map((row, rowIndex) => (
+                row.map((cell, colIndex) => (
+                    <Cell
+                    key={`${rowIndex}-${colIndex}`}
+                    value={cell}
+                    onCellClick={() => onCellClick(rowIndex, colIndex)}
+                    />
+                ))
+            ))}
+        </section>
     );
 }
 

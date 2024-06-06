@@ -7,3 +7,7 @@ export const CELL_VALUE = {
     POSSIBLE_MOVE: -1,
     START: 1
 };
+
+export const LOCAL_STORAGE = {
+    LEVEL_SELECT: 'levelSelect'
+}
